@@ -18,7 +18,6 @@
  */
 SimpleLightSensor::SimpleLightSensor()
 {
-
 }
 
 /**
@@ -47,10 +46,10 @@ void SimpleLightSensor::initializeNative()
  */
 uint16_t SimpleLightSensor::getValue()
 {
-    if(!native)
+    if (!native)
     {
-      readRegister(ANALOG_READ_REG, raw, 2 * sizeof(uint8_t));
-      return raw[0] | (raw[1]) << 8;
+        readRegister(ANALOG_READ_REG, raw, 2 * sizeof(uint8_t));
+        return raw[0] | (raw[1]) << 8;
     }
     return analogRead(pin);
 }
@@ -58,9 +57,9 @@ uint16_t SimpleLightSensor::getValue()
 float SimpleLightSensor::getResistance()
 {
     uint16_t temp = getValue();
-    if(temp != 0)
+    if (temp != 0)
     {
-        return R * (ADC_width - temp) / (float) temp;
+        return R * (ADC_width - temp) / (float)temp;
     }
     return 0;
 }
@@ -72,6 +71,7 @@ float SimpleLightSensor::getLux()
     {
         return 12500000.0 * pow(temp, -1.4); 
     }
+    return 0
 }
 
 void SimpleLightSensor::setADCWidth(uint8_t _ADC_width)
