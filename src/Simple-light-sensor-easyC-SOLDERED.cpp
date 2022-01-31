@@ -54,6 +54,11 @@ uint16_t SimpleLightSensor::getValue()
     return analogRead(pin);
 }
 
+/**
+ * @brief       Function for calculating resistance of LDR
+ *
+ * @return      resistance of LDR
+ */
 float SimpleLightSensor::getResistance()
 {
     uint16_t temp = getValue();
@@ -64,6 +69,11 @@ float SimpleLightSensor::getResistance()
     return 0;
 }
 
+/**
+ * @brief       Function for calculating value of light intensity in Lux
+ *
+ * @return      light intensity in lux
+ */
 float SimpleLightSensor::getLux()
 {
     uint16_t temp = getResistance();
@@ -74,6 +84,11 @@ float SimpleLightSensor::getLux()
     return 0;
 }
 
+/**
+ * @brief       Function for setting ADC bit width of microcontroller
+ *
+ * @param       uint8_t _ADC_width ADC bit width in bits
+ */
 void SimpleLightSensor::setADCWidth(uint8_t _ADC_width)
 {
     ADC_width = pow(2, _ADC_width) - 1;

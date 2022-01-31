@@ -5,7 +5,7 @@
  * @brief       Example for using the digital and analog read functions for Slider potentiometer with easyC
  *
  *
- *	product: www.solde.red/333076
+ *	product: www.solde.red/333078
  *
  * @authors     Goran Juric for Soldered.com
  ***************************************************/
