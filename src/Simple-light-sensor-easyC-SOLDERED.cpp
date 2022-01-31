@@ -71,7 +71,7 @@ float SimpleLightSensor::getLux()
     {
         return 12500000.0 * pow(temp, -1.4);
     }
-    return 0
+    return 0;
 }
 
 void SimpleLightSensor::setADCWidth(uint8_t _ADC_width)
