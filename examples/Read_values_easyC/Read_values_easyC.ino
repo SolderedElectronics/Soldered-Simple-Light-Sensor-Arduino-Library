@@ -23,20 +23,20 @@ void setup()
     // Initialize the sensor
     sensor.begin();
 
-    // If different microcontroller with different bit width 
+    // If different microcontroller with different bit width
     // is used, it should be set using this function
     sensor.setADCWidth(10);
 }
 
 void loop()
 {
-    Serial.print("Resistance of a LDR: "); //Print information message
-    Serial.print(sensor.getResistance()); //Prints percent value of slider potentiometer
-    Serial.println(" Ohms."); //Print information message
-    
-    Serial.print("Light intensity: "); //Print information message
-    Serial.print(sensor.getLux()); //Prints raw value of slider potentiometer
-    Serial.println(" lux."); //Print information message
+    Serial.print("Resistance of a LDR: "); // Print information message
+    Serial.print(sensor.getResistance());  // Prints percent value of slider potentiometer
+    Serial.println(" Ohms.");              // Print information message
+
+    Serial.print("Light intensity: "); // Print information message
+    Serial.print(sensor.getLux());     // Prints raw value of slider potentiometer
+    Serial.println(" lux.");           // Print information message
 
     delay(1000);
 }
