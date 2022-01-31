@@ -67,9 +67,9 @@ float SimpleLightSensor::getResistance()
 float SimpleLightSensor::getLux()
 {
     uint16_t temp = getResistance();
-    if(temp != 0)
+    if (temp != 0)
     {
-        return 12500000.0 * pow(temp, -1.4); 
+        return 12500000.0 * pow(temp, -1.4);
     }
     return 0
 }
