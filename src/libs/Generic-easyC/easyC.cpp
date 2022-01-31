@@ -6,12 +6,12 @@
  *
  *
  * @copyright GNU General Public License v3.0
- * @authors     @ soldered.com
+ * @authors     Goran Juric @ soldered.com
  ***************************************************/
 
 #include "easyC.h"
 
-namespace EASYC_SOLDERED_LIBS
+namespace SIMPLE_LIGHT_SENSOR_EASYC
 {
 
 /**

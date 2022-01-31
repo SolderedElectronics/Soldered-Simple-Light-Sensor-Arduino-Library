@@ -1,16 +1,22 @@
 ##################################################
-# Syntax Coloring Map For Obstacle-Sensor-SOLDERED
+# Syntax Coloring Map For Simple-Light-Sensor-SOLDERED
 ##################################################
 
 ##################################################
 # Datatypes (KEYWORD1)
 ##################################################
 
+SimpleLightSensor KEYWORD1
+
 ##################################################
 # Methods and Functions (KEYWORD2)
 ##################################################
 
 begin	KEYWORD2
+getValue KEYWORD2
+getResistance KEYWORD2
+getLux KEYWORD2
+setADCWidth KEYWORD2
 
 ##################################################
 # Constants (LITERAL1)
