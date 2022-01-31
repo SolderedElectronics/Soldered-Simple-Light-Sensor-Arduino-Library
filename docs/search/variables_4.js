@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['native_0',['native',['../class_e_a_s_y_c___s_o_l_d_e_r_e_d___l_i_b_s_1_1_easy_c.html#ab4a677cb6435085086c9b532a9d27b5e',1,'EASYC_SOLDERED_LIBS::EasyC']]]
+  ['native_0',['native',['../class_s_i_m_p_l_e___l_i_g_h_t___s_e_n_s_o_r___e_a_s_y_c_1_1_easy_c.html#a88293b4b13e6cb7df462c33829c0a64e',1,'SIMPLE_LIGHT_SENSOR_EASYC::EasyC']]]
 ];

@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['initializenative_0',['initializeNative',['../class_sensor.html#adb537c76173019fddf84b2d89e6c6559',1,'Sensor::initializeNative()'],['../class_e_a_s_y_c___s_o_l_d_e_r_e_d___l_i_b_s_1_1_easy_c.html#ac5e452bb3e1a549f4947bac4b5fe430e',1,'EASYC_SOLDERED_LIBS::EasyC::initializeNative()']]]
+  ['getlux_0',['getLux',['../class_simple_light_sensor.html#a2e2d938e80975ae158b8f29008b530e4',1,'SimpleLightSensor']]],
+  ['getresistance_1',['getResistance',['../class_simple_light_sensor.html#a8a3e5274bef579ef91e6256a11eb743a',1,'SimpleLightSensor']]],
+  ['getvalue_2',['getValue',['../class_simple_light_sensor.html#a1c0c4ed7fec63161dd17ce77ae788e51',1,'SimpleLightSensor']]]
 ];
