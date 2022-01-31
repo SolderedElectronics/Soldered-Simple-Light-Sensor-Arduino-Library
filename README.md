@@ -5,7 +5,8 @@
 
 | ![Product name](https://upload.wikimedia.org/wikipedia/commons/8/8f/Example_image.svg) |
 | :---------------------------------------------------------------------------------------------: |
-| [Simple light sensor with easyC](https://www.solde.red/333076)                                                            |
+| [Simple light sensor breakout board with easyC](https://www.solde.red/333076)                                                            |
+| [Simple light sensor breakout board](https://www.solde.red/333078)                                                            |
 
 Simple light sensor compliant to [easyC ecosystem](https://www.soldered.com/easyC). 
 
