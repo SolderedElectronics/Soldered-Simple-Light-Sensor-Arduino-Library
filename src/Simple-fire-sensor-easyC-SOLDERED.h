@@ -14,7 +14,6 @@
 
 #include "Arduino.h"
 #include "libs/Generic-easyC/easyC.h"
-#include "math.h"
 
 #define R 10000
 
@@ -25,7 +24,6 @@ class SimpleLightSensor : public SIMPLE_LIGHT_SENSOR_EASYC::EasyC
     SimpleLightSensor(int);
     uint16_t getValue(void);
     float getResistance(void);
-    float getLux(void);
     void setADCWidth(uint8_t);
 
   protected:

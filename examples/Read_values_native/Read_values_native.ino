@@ -1,8 +1,8 @@
 /**
  **************************************************
  *
- * @file        Read_values_native.ino
- * @brief       Example for using the digital and analog read functions for Simple Light sensor
+ * @file        Read_values.ino
+ * @brief       Example for using the digital and analog read functions for Simple fire sensor
  *
  *
  *	product: www.solde.red/333078
@@ -33,16 +33,20 @@ void setup()
 
 void loop()
 {
-    Serial.print("Resistance of a LDR: "); //Print information message
-    Serial.print(sensor.getResistance()); //Prints percent value of slider potentiometer
-    Serial.println(" Ohms."); //Print information message
     
-    Serial.print("Light intensity: "); //Print information message
-    Serial.print(sensor.getLux()); //Prints raw value of slider potentiometer
-    Serial.println(" lux."); //Print information message
 
-    //You can adjust treshold light intesity using potentiometer on breakout board
-    Serial.println(digitalRead(DIGITAL_PIN) ? "Treshold light intesity is past." : "Treshold intensity is not past.");
+  Serial.print("IR light sensor reading: "); // Print information message
+  Serial.println(sensor.getValue());  // Prints percent value of slider potentiometer
 
-    delay(1000);
+  if (digitalRead(DIGITAL_PIN))
+  {
+    Serial.println("Fire is not detected.");
+  }
+
+  else
+  {
+    Serial.println("Fire is detected!!");
+  }
+  delay(1000);
+
 }

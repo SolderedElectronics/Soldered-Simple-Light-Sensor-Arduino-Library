@@ -1,5 +1,5 @@
 ##################################################
-# Syntax Coloring Map For Simple-Light-Sensor-SOLDERED
+# Syntax Coloring Map For Simple-Fire-Sensor-SOLDERED
 ##################################################
 
 ##################################################

@@ -1,7 +1,7 @@
 /**
  **************************************************
  *
- * @file        Simple-light-sensor-easyC-SOLDERED.cpp
+ * @file        Simple-fire-sensor-easyC-SOLDERED.cpp
  * @brief       Example functions to overload in base class.
  *
  *
@@ -10,13 +10,13 @@
  ***************************************************/
 
 
-#include "Simple-light-sensor-easyC-SOLDERED.h"
+#include "Simple-fire-sensor-easyC-SOLDERED.h"
 
 /**
  * @brief                   Default constructor.
  *
  */
-SimpleLightSensor::SimpleLightSensor()
+SimpleFireSensor::SimpleFireSensor()
 {
 }
 
@@ -25,7 +25,7 @@ SimpleLightSensor::SimpleLightSensor()
  *
  * @param int _pin          Pin on which is sensor connected.
  */
-SimpleLightSensor::SimpleLightSensor(int _pin)
+SimpleFireSensor::SimpleFireSensor(int _pin)
 {
     pin = _pin;
     native = 1;
@@ -34,17 +34,17 @@ SimpleLightSensor::SimpleLightSensor(int _pin)
 /**
  * @brief                   Overloaded function for virtual in base class to initialize sensor specific.
  */
-void SimpleLightSensor::initializeNative()
+void SimpleFireSensor::initializeNative()
 {
     pinMode(pin, INPUT);
 }
 
 /**
- * @brief       Function for reading value of LDR
+ * @brief       Function for reading value of IR light sensor
  *
- * @return      value of LDR
+ * @return      value of IR light sensor
  */
-uint16_t SimpleLightSensor::getValue()
+uint16_t SimpleFireSensor::getValue()
 {
     if (!native)
     {
@@ -55,11 +55,11 @@ uint16_t SimpleLightSensor::getValue()
 }
 
 /**
- * @brief       Function for calculating resistance of LDR
+ * @brief       Function for calculating resistance of IR light sensor
  *
- * @return      resistance of LDR
+ * @return      resistance of IR light sensor
  */
-float SimpleLightSensor::getResistance()
+float SimpleFireSensor::getResistance()
 {
     uint16_t temp = getValue();
     if (temp != 0)
@@ -70,26 +70,11 @@ float SimpleLightSensor::getResistance()
 }
 
 /**
- * @brief       Function for calculating value of light intensity in Lux
- *
- * @return      light intensity in lux
- */
-float SimpleLightSensor::getLux()
-{
-    uint16_t temp = getResistance();
-    if (temp != 0)
-    {
-        return 12500000.0 * pow(temp, -1.4);
-    }
-    return 0;
-}
-
-/**
  * @brief       Function for setting ADC bit width of microcontroller
  *
  * @param       uint8_t _ADC_width ADC bit width in bits
  */
-void SimpleLightSensor::setADCWidth(uint8_t _ADC_width)
+void SimpleFireSensor::setADCWidth(uint8_t _ADC_width)
 {
     ADC_width = pow(2, _ADC_width) - 1;
 }
