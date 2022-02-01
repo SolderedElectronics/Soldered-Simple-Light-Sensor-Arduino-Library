@@ -47,7 +47,7 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"_simple-fire-sensor-easy_c-_s_o_l_d_e_r_e_d_8cpp.html"
+"_simple-light-sensor-easy_c-_s_o_l_d_e_r_e_d_8cpp.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
