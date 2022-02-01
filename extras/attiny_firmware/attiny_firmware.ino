@@ -1,10 +1,10 @@
 /**
  **************************************************
  *
- * @file        attiny_firmware for Simple light 
+ * @file        attiny_firmware for Simple fire 
  *              sensor with easyC
  * @brief       This sensor sends light intensity
- *              measured with LDR on breakout board
+ *              measured with IR light sensor on breakout board
  *
  *
  *
