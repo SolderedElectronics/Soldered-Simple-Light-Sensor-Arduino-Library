@@ -1,8 +1,8 @@
 /**
  **************************************************
  *
- * @file        Read_values.ino
- * @brief       Example for using the digital and analog read functions for Slider potentiometer with easyC
+ * @file        Read_values_native.ino
+ * @brief       Example for using the digital and analog read functions for Simple Light sensor
  *
  *
  *	product: www.solde.red/333078
