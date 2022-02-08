@@ -1,22 +1,21 @@
 ##################################################
-# Syntax Coloring Map For Simple-Light-Sensor-SOLDERED
+# Syntax Coloring Map 
 ##################################################
 
 ##################################################
-# Datatypes (KEYWORD1)
+# Datatypes 		(KEYWORD1)
 ##################################################
-
-SimpleLightSensor KEYWORD1
-
+SimpleLightSensor		KEYWORD1
 ##################################################
 # Methods and Functions (KEYWORD2)
 ##################################################
 
-begin	KEYWORD2
-getValue KEYWORD2
-getResistance KEYWORD2
-getLux KEYWORD2
-setADCWidth KEYWORD2
+begin	    		  KEYWORD2
+getValue		    KEYWORD2
+getResistance		KEYWORD2
+getLux		    KEYWORD2
+setADCWidth		    KEYWORD2
+upperTresh		    KEYWORD2
 
 ##################################################
 # Constants (LITERAL1)
