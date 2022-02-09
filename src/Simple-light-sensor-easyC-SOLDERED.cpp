@@ -36,7 +36,6 @@ SimpleLightSensor::SimpleLightSensor(int _pin)
  */
 void SimpleLightSensor::initializeNative()
 {
-    
 }
 
 /**

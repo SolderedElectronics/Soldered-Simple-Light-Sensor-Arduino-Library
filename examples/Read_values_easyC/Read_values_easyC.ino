@@ -31,11 +31,11 @@ void setup()
 void loop()
 {
     Serial.print("Resistance of a LDR: "); // Print information message
-    Serial.print(sensor.getResistance());  // Prints percent value of slider potentiometer
+    Serial.print(sensor.getResistance());  // Prints percent value of light sensor
     Serial.println(" Ohms.");              // Print information message
 
     Serial.print("Light intensity: "); // Print information message
-    Serial.print(sensor.getLux());     // Prints raw value of slider potentiometer
+    Serial.print(sensor.getLux());     // Prints raw value of light sensor
     Serial.println(" lux.");           // Print information message
 
     delay(1000);
