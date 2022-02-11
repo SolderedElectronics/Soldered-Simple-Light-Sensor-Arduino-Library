@@ -17,14 +17,17 @@ SimpleLightSensor sensor;
 
 void setup()
 {
-    // Initialize the serial communication via UART
+    // Initialize the serial communication via UART with 115200 baud rate
+    //and it is needed to set same baud rate in serial monitor if it is used
     Serial.begin(115200);
 
-    // Initialize the sensor
+    // Initialize the sensor for use
     sensor.begin();
 
     // If different microcontroller with different bit width
     // is used, it should be set using this function
+    // In this example Arduino Uno is used which have 
+    // 10 bits ADC width
     sensor.setADCWidth(10);
 }
 
