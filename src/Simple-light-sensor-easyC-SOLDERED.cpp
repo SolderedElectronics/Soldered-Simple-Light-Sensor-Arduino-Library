@@ -43,7 +43,7 @@ void SimpleLightSensor::initializeNative()
  *
  * @return      value of LDR
  */
-uint16_t SimpleLightSensor::getValue()
+uint32_t SimpleLightSensor::getValue()
 {
     if (!native)
     {
