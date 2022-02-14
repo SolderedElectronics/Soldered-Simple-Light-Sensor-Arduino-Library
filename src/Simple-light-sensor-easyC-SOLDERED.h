@@ -23,7 +23,7 @@ class SimpleLightSensor : public SIMPLE_LIGHT_SENSOR_EASYC::EasyC
   public:
     SimpleLightSensor();
     SimpleLightSensor(int);
-    uint16_t getValue(void);
+    uint32_t getValue(void);
     float getResistance(void);
     float getLux(void);
     void setADCWidth(uint8_t);
