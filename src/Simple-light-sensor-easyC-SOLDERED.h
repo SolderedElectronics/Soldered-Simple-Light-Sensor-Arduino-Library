@@ -18,7 +18,7 @@
 
 #define R 10000
 
-class SimpleLightSensor : public SIMPLE_LIGHT_SENSOR_EASYC::EasyC
+class SimpleLightSensor : public EasyC
 {
   public:
     SimpleLightSensor();
