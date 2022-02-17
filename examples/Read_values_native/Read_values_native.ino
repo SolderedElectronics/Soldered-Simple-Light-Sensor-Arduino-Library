@@ -9,11 +9,21 @@
  *
  * @authors     Goran Juric for Soldered.com
  ***************************************************/
+ 
+//Connecting diagram
+//
+//Breakout      Arduino
+//|-------------|
+//D0------------D9
+//A0------------A0
+//GND-----------GND
+//VCC-----------5V
+
 
 #include "Simple-light-sensor-easyC-SOLDERED.h"
 
-#define ANALOG_PIN A0
-#define DIGITAL_PIN 9
+#define ANALOG_PIN A0       //Pin for analog read
+#define DIGITAL_PIN 9       //Pin for digital read
 
 // Declare the sensor object and set pin on which sensor is connected
 SimpleLightSensor sensor(ANALOG_PIN);
