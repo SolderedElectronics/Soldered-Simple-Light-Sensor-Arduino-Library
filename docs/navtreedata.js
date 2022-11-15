@@ -25,7 +25,9 @@
 var NAVTREE =
 [
   [ "Simple light sensor easyC Library", "index.html", [
-    [ "Simple light sensor with easyC Arduino library", "index.html", null ],
+    [ "Simple light sensor board with easyC Arduino library", "index.html", [
+      [ "Have fun!", "index.html#autotoc_md8", null ]
+    ] ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],
