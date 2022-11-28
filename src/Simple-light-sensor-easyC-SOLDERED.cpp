@@ -107,12 +107,12 @@ void SimpleLightSensor::setADCWidth(uint8_t _ADC_width)
 
 /**
  * @brief       Function to set threshold value to turn on the LED
- * 
+ *
  * @param       byte _threshold value in %
-*/
+ */
 void SimpleLightSensor::setThreshold(byte _threshold)
 {
-    if(_threshold > 100)
+    if (_threshold > 100)
     {
         return;
     }
