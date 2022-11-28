@@ -50,8 +50,8 @@ uint16_t SimpleLightSensor::getValue()
         byte data[2];
         uint16_t resistance;
 
-        Wire.beginTransmission(0x30);
-        Wire.requestFrom(0x30, 2);
+        Wire.beginTransmission(address);
+        Wire.requestFrom(address, 2);
 
         if (Wire.available())
         {
