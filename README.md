@@ -19,7 +19,7 @@ You can find hardware design for this board in *Simple light sensor board with e
 
 ### Documentation
 
-Access Arduino library documentation [here](https://solderedelectronics.github.io/Soldered-Simple-Light-Sensor-Arduino-library/).
+Access Arduino library documentation [here](https://solderedelectronics.github.io/Soldered-Simple-Light-Sensor-Arduino-Library/).
 
 - Tutorial for using the Simple light sensor board
 - Installing an Arduino library
