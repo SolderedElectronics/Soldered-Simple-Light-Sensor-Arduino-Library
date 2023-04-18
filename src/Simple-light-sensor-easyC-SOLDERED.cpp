@@ -39,43 +39,49 @@ void SimpleLightSensor::initializeNative()
 }
 
 /**
- * @brief       Function for reading value of LDR
+ * @brief       Function for reading raw value of LDR
  *
- * @return      value of LDR
+ * @return      Raw value of LDR (0 - 1023)
  */
-uint16_t SimpleLightSensor::getValue()
+uint16_t SimpleLightSensor::getRawValue()
 {
     if (!native)
     {
-        byte data[2];
-        uint16_t resistance;
+        // Read bytes of raw potentiometer data
+        char data[2];
+        readData(data, 2);
 
-        Wire.beginTransmission(address);
-        Wire.requestFrom(address, 2);
+        // Convert it to uint16_t
+        uint16_t value = 0;
+        value = *(uint16_t *)data;
 
-        if (Wire.available())
-        {
-            Wire.readBytes(data, 2);
-        }
-        Wire.endTransmission();
-
-        resistance = *(uint16_t *)data;
-        return resistance;
+        // Return converted value
+        return value;
     }
     return analogRead(pin);
 }
 
 /**
+ * @brief       Function for reading value of LDR
+ *
+ * @return      Value of LDR in percent (0 - 100%)
+ */
+float SimpleLightSensor::getValue()
+{
+    return (getRawValue() / float(1023) * 100);
+}
+
+/**
  * @brief       Function for calculating resistance of LDR
  *
- * @return      resistance of LDR
+ * @return      Resistance of LDR
  */
 float SimpleLightSensor::getResistance()
 {
-    uint16_t temp = getValue();
+    uint16_t temp = getRawValue();
     if (temp != 0)
     {
-        return R * temp / (float)(ADC_width - temp);
+        return R * (temp / (float)(ADC_width - temp));
     }
     return 0;
 }
@@ -108,16 +114,37 @@ void SimpleLightSensor::setADCWidth(uint8_t _ADC_width)
 /**
  * @brief       Function to set threshold value to turn on the LED
  *
- * @param       byte _threshold value in %
+ * @param       float _threshold value in %
  */
-void SimpleLightSensor::setThreshold(byte _threshold)
+void SimpleLightSensor::setThreshold(float _threshold)
 {
-    if (_threshold > 100)
+    // Check if the threshold is the proper value
+    if (_threshold < 0 || _threshold > 100)
     {
         return;
     }
-    threshold = _threshold;
-    Wire.beginTransmission(address);
-    Wire.write(threshold);
-    Wire.endTransmission();
+
+    // Convert percentage threshold to raw value and send it
+    uint16_t rawThreshold = _threshold * 0.01 * 1024;
+    setRawThreshold(rawThreshold);
+}
+
+/**
+ * @brief       Function to set raw threshold value to turn on the LED
+ *
+ * @param       uint16_t _treshold raw value (0 - 1023)
+ */
+void SimpleLightSensor::setRawThreshold(uint16_t _treshold)
+{
+    // Check if the threshold is the proper value
+    if (_treshold < 0 || _treshold > 1023)
+    {
+        return;
+    }
+
+    // Convert raw threshold value into 2 bytes for sending
+    uint8_t *rawThreshold = (uint8_t *)&_treshold;
+
+    // Send raw threshold
+    sendData(rawThreshold, 2);
 }
