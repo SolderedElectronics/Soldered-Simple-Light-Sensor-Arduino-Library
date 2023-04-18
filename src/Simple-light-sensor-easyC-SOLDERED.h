@@ -23,11 +23,13 @@ class SimpleLightSensor : public EasyC
   public:
     SimpleLightSensor();
     SimpleLightSensor(int);
-    uint16_t getValue(void);
+    float getValue(void);
+    uint16_t getRawValue(void);
     float getResistance(void);
     float getLux(void);
     void setADCWidth(uint8_t);
-    void setThreshold(byte);
+    void setThreshold(float);
+    void setRawThreshold(uint16_t);
 
   protected:
     void initializeNative();
